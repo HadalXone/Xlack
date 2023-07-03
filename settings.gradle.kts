@@ -15,3 +15,6 @@ dependencyResolutionManagement {
   }
 }
 rootProject.name = "xlack"
+include(
+  ":xlack-core",
+)
