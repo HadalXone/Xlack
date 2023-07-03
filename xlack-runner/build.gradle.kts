@@ -6,6 +6,27 @@ plugins {
   application
 }
 
+application {
+  mainClass.set("org.arxing.xlack.MainKt")
+  group = "org.arxing.xlack"
+  version = "0.1.0"
+}
+
+val runnerName = "xlack-runner"
+
+tasks.withType<ShadowJar> {
+  archiveBaseName.set(runnerName)
+  archiveClassifier.set("")
+  archiveVersion.set("")
+}
+
+tasks.register<Copy>("deployDemoRunner") {
+  group = "xlack"
+  dependsOn("shadowJar")
+  from(File(project.buildDir, "libs/$runnerName.jar"))
+  into(File(rootProject.projectDir, "demo"))
+}
+
 dependencies {
   implementation(project(":xlack-core"))
 
