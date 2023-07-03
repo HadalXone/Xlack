@@ -20,4 +20,5 @@ include(
   ":xlack-runner",
   ":xlack-cli",
   ":xlack-ui",
+  ":xlack-demo-plugin",
 )
