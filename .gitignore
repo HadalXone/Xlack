@@ -1,7 +1,0 @@
-.gradle
-.idea
-buildSrc/build
-**/local.properties
-**/build
-xlack-config.json
-demo
