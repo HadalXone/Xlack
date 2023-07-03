@@ -18,4 +18,5 @@ rootProject.name = "xlack"
 include(
   ":xlack-core",
   ":xlack-runner",
+  ":xlack-ui",
 )
