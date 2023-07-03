@@ -23,6 +23,12 @@ class XlackCommand : CliktCommand(), KoinComponent {
     .file(canBeDir = false)
     .defaultLazy { File(Util.runtimeDir, "xlack-config.json") }
 
+  init {
+    subcommands(
+      StartServiceCommand(),
+    )
+  }
+
   override fun run() {
     loadConfig()
   }
