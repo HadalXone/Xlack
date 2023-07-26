@@ -24,7 +24,7 @@ tasks.register<Delete>("cleanDemo") {
 tasks.register<JavaExec>("runDemo") {
   group = "xlack"
   dependsOn(":deployDemo")
-  mainClass.set("org.arxing.xlack.MainKt")
+  mainClass.set("org.xailor.xlack.MainKt")
   args = listOf("--config", "xlack-config.json", "start")
   classpath = rootProject.files("demo/xlack-runner.jar")
 }
