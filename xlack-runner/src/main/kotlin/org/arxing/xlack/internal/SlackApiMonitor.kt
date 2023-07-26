@@ -41,7 +41,7 @@ class SlackApiMonitor(
     } else null
 
     if (config.logRequest) {
-      logger.info("${"Request".bg(AnsiColor.Yellow)} [${request.method}] ${request.url}\nbody=>$bodyString")
+      logger.info("${"Request".bg(AnsiColor.BrightGreen)} [${request.method}] ${request.url}\nbody=>$bodyString")
     }
     return request.newBuilder().method(request.method, restoreBody).build()
   }
