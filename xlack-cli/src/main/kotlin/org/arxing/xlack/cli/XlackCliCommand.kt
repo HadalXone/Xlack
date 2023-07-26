@@ -20,6 +20,8 @@ abstract class XlackCliCommand(
   autoCompleteEnvvar: String? = "",
   allowMultipleSubcommands: Boolean = false,
   treatUnknownOptionsAsArgs: Boolean = false,
+  private val generalColor: String = "#00FF00",
+  private val errorColor: String = "#FF0000"
 ) : CliktCommand(
   help,
   epilog,
@@ -48,7 +50,7 @@ abstract class XlackCliCommand(
           attachments {
             attachment {
               text(text)
-              color(if (isError) "#ff0000" else "#00ff00")
+              color(if (isError) errorColor else generalColor)
             }
           }
         }.postEphemeral(channel, context.requestUserId)
