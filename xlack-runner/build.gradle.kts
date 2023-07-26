@@ -7,8 +7,8 @@ plugins {
 }
 
 application {
-  mainClass.set("org.arxing.xlack.MainKt")
-  group = "org.arxing.xlack"
+  mainClass.set("org.xailor.xlack.MainKt")
+  group = "org.xailor.xlack"
   version = "0.1.0"
 }
 
