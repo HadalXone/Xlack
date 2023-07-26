@@ -10,5 +10,5 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "build-logic"
+rootProject.name = "xlack-build"
 include(":convention")

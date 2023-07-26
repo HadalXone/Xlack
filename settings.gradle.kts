@@ -1,5 +1,5 @@
 pluginManagement {
-  includeBuild("build-logic")
+  includeBuild("xlack-build")
   repositories {
     google()
     mavenCentral()
@@ -15,3 +15,10 @@ dependencyResolutionManagement {
   }
 }
 rootProject.name = "xlack"
+include(
+  ":xlack-core",
+  ":xlack-runner",
+  ":xlack-cli",
+  ":xlack-ui",
+  ":xlack-demo-plugin",
+)
