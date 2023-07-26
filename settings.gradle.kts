@@ -1,5 +1,5 @@
 pluginManagement {
-  includeBuild("build-logic")
+  includeBuild("xlack-build")
   repositories {
     google()
     mavenCentral()
